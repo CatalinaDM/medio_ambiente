@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block title %}El Futuro del Planeta{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>El planeta que dejaremos a nuestros hijos</h2>
+    <p style="font-size: 1.2rem; margin-top: 1rem; opacity: 0.95;">
+      <center> Decisiones de hoy, consecuencias de mañana</center> 
+    </p>
+</div>
+
+<div class="content-card animate-on-scroll">
+    <div class="row align-items-center">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+            <img src="{{ url_for('static', filename='images/futuro.jpg') }}" 
+                 class="img-fluid rounded" 
+                 alt="Futuro del Planeta">
+        </div>
+        <div class="col-lg-5">
+            <div style="background: var(--gradient-ocean); 
+                        padding: 2.5rem; 
+                        border-radius: 20px; 
+                        color: white;
+                        box-shadow: var(--shadow-float);">
+                <h3 style="font-weight: 700; margin-bottom: 1.5rem; font-size: 1.8rem;">
+                    💭 Una reflexión necesaria
+                </h3>
+                <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Las decisiones que tomamos hoy impactarán directamente
+                    la calidad de vida de las próximas generaciones. No heredamos 
+                    la Tierra de nuestros ancestros; la tomamos prestada de nuestros hijos.
+                </p>
+                <p style="font-size: 1rem; opacity: 0.9; font-style: italic;">
+                    "El futuro dependerá de lo que hagamos en el presente" - Mahatma Gandhi
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Comparativa: Dos escenarios -->
+<div class="mt-5 animate-on-scroll">
+    <h3 class="text-center mb-4 text-gradient" style="font-weight: 700; font-size: 2.5rem;">
+         Dos Caminos Posibles para 2050
+    </h3>
+    
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="content-card" style="border: 3px solid #dc2626; height: 100%;">
+                <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); 
+                            padding: 1.5rem; 
+                            border-radius: 12px; 
+                            margin-bottom: 1.5rem;">
+                    <h4 style="color: #991b1b; font-weight: 700; text-align: center; margin: 0;">
+                        ❌ Escenario Sin Acción
+                    </h4>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 1.05rem;">
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #fee2e2;">
+                        🌡️ Aumento de +3°C en temperatura global
+                    </li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #fee2e2;">
+                        🌊 Nivel del mar sube 1 metro, inundando ciudades costeras
+                    </li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #fee2e2;">
+                        🏜️ 50% más sequías e incendios forestales
+                    </li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #fee2e2;">
+                        🐟 Colapso de ecosistemas marinos y arrecifes de coral
+                    </li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #fee2e2;">
+                        👥 200 millones de refugiados climáticos
+                    </li>
+                    <li style="padding: 0.8rem 0;">
+                        💸 Pérdidas económicas de $23 billones anuales
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="content-card" style="border: 3px solid #10b981; height: 100%;">
+                <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); 
+                            padding: 1.5rem; 
+                            border-radius: 12px; 
+                            margin-bottom: 1.5rem;">
+                    <h4 style="color: #065f46; font-weight: 700; text-align: center; margin: 0;">
+                        ✅ Escenario Con Acción
+                    </h4>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 1.05rem;">
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #d1fae5;">
+                        🌡️ Limitación a +1.5°C según Acuerdo de París
+                    </li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #d1fae5;">
+                        🌊 Control del nivel del mar, protección de costas
+                    </li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #d1fae5;">
+                        🌱 80% de energía proviene de fuentes renovables
+                    </li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #d1fae5;">
+                        🐠 Recuperación de biodiversidad marina y terrestre
+                    </li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #d1fae5;">
+                        🏙️ Ciudades sostenibles con aire limpio
+                    </li>
+                    <li style="padding: 0.8rem 0;">
+                        💚 Creación de 24 millones de empleos verdes
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Principales amenazas -->
+<div class="row mt-5 animate-on-scroll">
+    <div class="col-md-4 mb-4">
+        <div class="content-card text-center" style="height: 100%;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🌡️</div>
+            <h4 style="color: var(--primary-ocean); font-weight: 600; margin-bottom: 1rem;">Cambio Climático</h4>
+            <p style="line-height: 1.8;">
+                El aumento de temperatura global amenaza ecosistemas enteros. Desde 1880, 
+                la temperatura ha subido 1.1°C, y los últimos 7 años han sido los más calurosos 
+                registrados. Las emisiones de CO₂ deben reducirse un 45% para 2030.
+            </p>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="content-card text-center" style="height: 100%;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">💧</div>
+            <h4 style="color: var(--primary-ocean); font-weight: 600; margin-bottom: 1rem;">Crisis Hídrica</h4>
+            <p style="line-height: 1.8;">
+                Para 2025, dos tercios de la población mundial podría enfrentar escasez de agua. 
+                El agua dulce representa solo el 3% del total mundial, y el 70% se usa en agricultura. 
+                Cada gota cuenta.
+            </p>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="content-card text-center" style="height: 100%;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🦋</div>
+            <h4 style="color: var(--primary-ocean); font-weight: 600; margin-bottom: 1rem;">Pérdida de Biodiversidad</h4>
+            <p style="line-height: 1.8;">
+                Un millón de especies están en riesgo de extinción. Hemos perdido el 68% 
+                de las poblaciones de vida silvestre desde 1970. La biodiversidad es la red 
+                de seguridad de la vida en la Tierra.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Soluciones prácticas -->
+<div class="content-card mt-4 animate-on-scroll" style="background: linear-gradient(to right, #cffafe, #e0f2fe); border: none;">
+    <h3 class="text-center mb-4" style="color: var(--ocean-dark); font-weight: 700; font-size: 2rem;">
+         ¿Qué podemos hacer HOY?
+    </h3>
+    <div class="row">
+        <div class="col-md-6">
+            <h5 style="color: var(--primary-ocean); font-weight: 600; margin-bottom: 1rem;">
+                🏠 En el hogar
+            </h5>
+            <ul style="font-size: 1.05rem; line-height: 2;">
+                <li>Cambiar a bombillas LED (90% menos energía)</li>
+                <li>Reducir duchas a 5 minutos (ahorra 45 litros/día)</li>
+                <li>Compostar residuos orgánicos (30% menos basura)</li>
+                <li>Desconectar aparatos en standby (ahorra 10% electricidad)</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h5 style="color: var(--primary-ocean); font-weight: 600; margin-bottom: 1rem;">
+                🌍 En la comunidad
+            </h5>
+            <ul style="font-size: 1.05rem; line-height: 2;">
+                <li>Usar transporte público o bicicleta (reduce 2.6 ton CO₂/año)</li>
+                <li>Apoyar negocios locales y sostenibles</li>
+                <li>Plantar árboles en tu comunidad</li>
+                <li>Educar y compartir conocimiento ambiental</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Mensaje de esperanza -->
+<div class="mt-4 animate-on-scroll">
+    <div class="content-card text-center" style="background: var(--gradient-ocean); color: white; border: none;">
+        <h3 style="font-weight: 700; margin-bottom: 1.5rem; font-size: 2.2rem;">
+             Aún estamos a tiempo
+        </h3>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+            La ventana de oportunidad se está cerrando, pero la ciencia es clara: si actuamos 
+            ahora, con decisión y coordinación global, podemos evitar los peores escenarios 
+            climáticos. El futuro no está escrito. <strong>Tú eres parte de la solución.</strong>
+        </p>
+        <div style="margin-top: 2rem; font-size: 3rem;">
+            🌱🌍💚
+        </div>
+    </div>
+</div>
+
+{% endblock %}

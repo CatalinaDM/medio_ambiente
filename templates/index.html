@@ -1,0 +1,372 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - Conciencia Ambiental{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="row align-items-center">
+        <div class="col-lg-6 hero-content">
+            <h1>¿Por qué es importante cuidar el medio ambiente?</h1>
+            <p class="lead">
+                El medio ambiente es la base de la vida. Protegerlo garantiza bienestar,
+                salud y recursos para las futuras generaciones. Cada acción cuenta, cada 
+                decisión importa, cada persona hace la diferencia.
+            </p>
+            <div class="mt-4">
+                <a href="/tres-r" class="btn btn-primary-custom me-2">
+                     Descubre las 3 R
+                </a>
+                <a href="/sistema-ambiental" class="btn btn-outline-success">
+                    📚 Más información
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-6 hero-image">
+            <img src="{{ url_for('static', filename='images/ambiente.jpg') }}" 
+                 class="img-fluid" 
+                 alt="Medio Ambiente">
+        </div>
+    </div>
+</section>
+
+<!-- Frases motivacionales rotativas -->
+<section class="mt-5 animate-on-scroll">
+    <div class="content-card" style="background: var(--gradient-ocean); color: white; border: none; text-align: center; padding: 2.5rem;">
+        <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem;">💭 Frase del Momento</h3>
+        <p id="rotating-quote" style="font-size: 1.4rem; line-height: 1.8; font-style: italic; min-height: 100px;"></p>
+        <small id="quote-author" style="font-size: 1.1rem; opacity: 0.9;"></small>
+    </div>
+</section>
+
+<!-- Estadísticas impactantes -->
+<section class="stats-section animate-on-scroll">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="8000000">0</div>
+                    <div class="stat-label">🌊 Toneladas de plástico en océanos/año</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="137">0</div>
+                    <div class="stat-label">🦋 Especies se extinguen diariamente</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="1.1">0</div>
+                    <div class="stat-label">🌡️ °C aumento temperatura global</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quiz interactivo -->
+<section class="mt-5 pt-4 animate-on-scroll">
+    <h2 class="text-center mb-5 text-gradient" style="font-weight: 700; font-size: 2.8rem;">
+         Quiz Ambiental Interactivo
+    </h2>
+    <div class="quiz-container">
+        <div id="quiz-content">
+            <div class="quiz-question" id="question-text">Cargando pregunta...</div>
+            <div id="quiz-options"></div>
+            <div id="quiz-feedback" class="quiz-result" style="display: none;"></div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button id="next-question" class="btn btn-primary-custom" style="display: none;">
+                    Siguiente Pregunta →
+                </button>
+                <div id="quiz-score" style="font-size: 1.3rem; font-weight: 700; margin-top: 1rem; color: var(--ocean-blue);"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cards informativos -->
+<section class="mt-5 pt-4 animate-on-scroll">
+    <h2 class="text-center mb-5 text-gradient" style="font-weight: 700; font-size: 2.6rem;">
+         Nuestro Compromiso con el Planeta
+    </h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="content-card text-center">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🌳</div>
+                <h3 style="color: var(--ocean-blue); font-weight: 600; margin-bottom: 1rem;">Conservación Marina</h3>
+                <p style="line-height: 1.8;">Los océanos absorben 30% del CO₂ que producimos y generan más del 50% del oxígeno. Protegerlos es proteger nuestra vida.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="content-card text-center">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">♻️</div>
+                <h3 style="color: var(--aqua-green); font-weight: 600; margin-bottom: 1rem;">Economía Circular</h3>
+                <p style="line-height: 1.8;">Reducir, reutilizar y reciclar puede disminuir las emisiones de gases invernadero hasta un 85% en algunos materiales.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="content-card text-center">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🌍</div>
+                <h3 style="color: var(--teal-bright); font-weight: 600; margin-bottom: 1rem;">Educación Transformadora</h3>
+                <p style="line-height: 1.8;">70% de las personas cambian sus hábitos cuando comprenden el impacto ambiental real de sus acciones diarias.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Datos curiosos -->
+<section class="mt-5 pt-4 animate-on-scroll">
+    <div class="content-card" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border: none;">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h3 style="color: var(--sea-deep); font-weight: 700; margin-bottom: 1.5rem; font-size: 2rem;">
+                    🌊 ¿Sabías que...?
+                </h3>
+                <ul style="list-style: none; padding: 0; font-size: 1.1rem; color: #0d1b2a;">
+                    <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; font-size: 1.3rem;">🐋</span>
+                        <strong>Las ballenas fertilizan el océano:</strong> Sus heces contienen hierro y nitrógeno que alimentan al fitoplancton, produciendo el 50% del oxígeno mundial
+                    </li>
+                    <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; font-size: 1.3rem;">🌲</span>
+                        <strong>Un árbol adulto:</strong> Produce oxígeno para 2 personas y absorbe 22 kg de CO₂ anualmente
+                    </li>
+                    <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; font-size: 1.3rem;">💧</span>
+                        <strong>Crisis de agua dulce:</strong> Solo 0.007% del agua del planeta es potable y accesible
+                    </li>
+                    <li style="padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; font-size: 1.3rem;">🐝</span>
+                        <strong>Abejas en peligro:</strong> Polinizan 75% de nuestros cultivos, pero sus poblaciones han caído 40% en una década
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-center">
+                <div style="font-size: 10rem; opacity: 0.3; animation: float-bubbles 8s infinite;">🌊</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Llamado a la acción -->
+<section class="mt-5 pt-4 animate-on-scroll">
+    <div class="content-card text-center" style="background: var(--gradient-ocean); color: white; border: none; padding: 3rem;">
+        <h3 style="font-weight: 800; margin-bottom: 2rem; font-size: 2.5rem;">
+            ⏰ El océano del tiempo se agota
+        </h3>
+        <p style="font-size: 1.3rem; max-width: 750px; margin: 0 auto 2rem; line-height: 1.9;">
+            Como las olas que no esperan, el cambio climático avanza. Pero como el mar que limpia las playas, 
+            nuestras acciones pueden restaurar el equilibrio. <strong>No necesitas ser perfecto, solo comenzar.</strong>
+        </p>
+        <a href="/tres-r" class="btn btn-outline-success" style="border-color: white !important; color: white !important; font-size: 1.1rem;">
+             Inicia tu transformación
+        </a>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // ==================== FRASES MOTIVACIONALES ====================
+    const quotes = [
+        { text: "El océano es el corazón de nuestro planeta. Si protegemos el océano, nos protegemos a nosotros mismos.", author: "Sylvia Earle" },
+        { text: "No heredamos la Tierra de nuestros ancestros; la tomamos prestada de nuestros hijos.", author: "Proverbio Nativo Americano" },
+        { text: "El futuro dependerá de lo que hagamos en el presente.", author: "Mahatma Gandhi" },
+        { text: "Cuando bebas agua, recuerda la fuente.", author: "Proverbio Chino" },
+        { text: "La Tierra no es una herencia de nuestros padres, sino un préstamo de nuestros hijos.", author: "Proverbio Keniano" },
+        { text: "El mejor momento para plantar un árbol fue hace 20 años. El segundo mejor momento es ahora.", author: "Proverbio Chino" },
+        { text: "Sé el cambio que quieres ver en el mundo.", author: "Mahatma Gandhi" }
+    ];
+    
+    let currentQuoteIndex = 0;
+    
+    function rotateQuote() {
+        const quoteElement = document.getElementById('rotating-quote');
+        const authorElement = document.getElementById('quote-author');
+        
+        if (quoteElement && authorElement) {
+            quoteElement.style.opacity = '0';
+            authorElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                const quote = quotes[currentQuoteIndex];
+                quoteElement.textContent = `"${quote.text}"`;
+                authorElement.textContent = `— ${quote.author}`;
+                
+                quoteElement.style.opacity = '1';
+                authorElement.style.opacity = '1';
+                
+                currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+            }, 500);
+        }
+    }
+    
+    // ==================== QUIZ INTERACTIVO ====================
+    const quizQuestions = [
+        {
+            question: "🌊 ¿Qué porcentaje del oxígeno que respiramos proviene de los océanos?",
+            options: ["25%", "50%", "75%", "90%"],
+            correct: 1,
+            explanation: "¡Correcto! Los océanos, especialmente el fitoplancton marino, producen más del 50% del oxígeno que respiramos."
+        },
+        {
+            question: "♻️ ¿Cuántos años tarda en degradarse una botella de plástico en el océano?",
+            options: ["50 años", "100 años", "450 años", "1000 años"],
+            correct: 2,
+            explanation: "¡Exacto! Una botella de plástico puede tardar hasta 450 años en degradarse, por eso es crucial reducir su uso."
+        },
+        {
+            question: "🌳 ¿Cuánto CO₂ puede absorber un árbol adulto al año?",
+            options: ["5 kg", "22 kg", "50 kg", "100 kg"],
+            correct: 1,
+            explanation: "¡Bien! Un árbol adulto absorbe aproximadamente 22 kg de CO₂ por año, por eso plantar árboles es tan importante."
+        },
+        {
+            question: "💧 ¿Qué porcentaje del agua en la Tierra es potable y accesible?",
+            options: ["0.007%", "1%", "5%", "10%"],
+            correct: 0,
+            explanation: "¡Correcto! Solo el 0.007% del agua del planeta es dulce, potable y accesible. ¡Cuidémosla!"
+        },
+        {
+            question: "🐝 ¿Qué porcentaje de cultivos alimentarios dependen de la polinización de abejas?",
+            options: ["25%", "50%", "75%", "90%"],
+            correct: 2,
+            explanation: "¡Sí! El 75% de los cultivos que comemos dependen de las abejas y otros polinizadores."
+        }
+    ];
+    
+    let currentQuestion = 0;
+    let score = 0;
+    let answered = false;
+    
+    function loadQuestion() {
+        const question = quizQuestions[currentQuestion];
+        document.getElementById('question-text').textContent = question.question;
+        
+        const optionsContainer = document.getElementById('quiz-options');
+        optionsContainer.innerHTML = '';
+        
+        question.options.forEach((option, index) => {
+            const optionDiv = document.createElement('div');
+            optionDiv.className = 'quiz-option';
+            optionDiv.textContent = option;
+            optionDiv.onclick = () => checkAnswer(index);
+            optionsContainer.appendChild(optionDiv);
+        });
+        
+        document.getElementById('quiz-feedback').style.display = 'none';
+        document.getElementById('next-question').style.display = 'none';
+        answered = false;
+    }
+    
+    function checkAnswer(selectedIndex) {
+        if (answered) return;
+        
+        answered = true;
+        const question = quizQuestions[currentQuestion];
+        const options = document.querySelectorAll('.quiz-option');
+        const feedback = document.getElementById('quiz-feedback');
+        
+        options.forEach((option, index) => {
+            if (index === question.correct) {
+                option.classList.add('correct');
+            } else if (index === selectedIndex) {
+                option.classList.add('incorrect');
+            }
+            option.style.pointerEvents = 'none';
+        });
+        
+        if (selectedIndex === question.correct) {
+            score++;
+            feedback.textContent = '🎉 ' + question.explanation;
+            feedback.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+            feedback.style.color = 'white';
+        } else {
+            feedback.textContent = '❌ ' + question.explanation;
+            feedback.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+            feedback.style.color = 'white';
+        }
+        
+        feedback.style.display = 'block';
+        
+        document.getElementById('quiz-score').textContent = `Puntuación: ${score}/${quizQuestions.length}`;
+        
+        if (currentQuestion < quizQuestions.length - 1) {
+            document.getElementById('next-question').style.display = 'inline-block';
+        } else {
+            setTimeout(() => {
+                alert(`🎊 Quiz completado! Tu puntuación final: ${score}/${quizQuestions.length}\n\n${getScoreMessage(score)}`);
+                currentQuestion = 0;
+                score = 0;
+                loadQuestion();
+            }, 2000);
+        }
+    }
+    
+    function getScoreMessage(score) {
+        const percentage = (score / quizQuestions.length) * 100;
+        if (percentage === 100) return "¡Perfecto! Eres un experto ambiental 🌟";
+        if (percentage >= 80) return "¡Excelente! Tienes gran conciencia ambiental 🌊";
+        if (percentage >= 60) return "¡Bien hecho! Vas por buen camino 🌱";
+        return "Sigue aprendiendo, cada paso cuenta 💚";
+    }
+    
+    // ==================== CONTADOR DE ESTADÍSTICAS ====================
+    function animateCounter(element) {
+        const target = parseFloat(element.getAttribute('data-target'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target.toLocaleString();
+                clearInterval(timer);
+            } else {
+                if (target < 10) {
+                    element.textContent = current.toFixed(1);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }
+        }, 16);
+    }
+    
+    // ==================== INICIALIZACIÓN ====================
+    document.addEventListener('DOMContentLoaded', function() {
+        // Iniciar rotación de frases
+        rotateQuote();
+        setInterval(rotateQuote, 8000);
+        
+        // Cargar quiz
+        loadQuestion();
+        
+        document.getElementById('next-question').addEventListener('click', () => {
+            currentQuestion++;
+            loadQuestion();
+        });
+        
+        // Observar estadísticas
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numbers = entry.target.querySelectorAll('.stat-number');
+                    numbers.forEach(num => {
+                        if (!num.classList.contains('animated')) {
+                            num.classList.add('animated');
+                            animateCounter(num);
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,265 @@
+{% extends "base.html" %}
+
+{% block title %}Las 3 R del Cuidado Ambiental{% endblock %}
+
+{% block content %}
+<div class="tres-r-section">
+    <h2 class="section-title text-center">Las 3 R del cuidado ambiental</h2>
+    
+    <p class="text-center mb-5" style="font-size: 1.25rem; color: #334155; max-width: 850px; margin: 0 auto 3rem; line-height: 1.8;">
+        Tres palabras poderosas que pueden transformar nuestro impacto en el planeta. 
+        No se trata solo de reciclar, sino de adoptar un estilo de vida consciente que 
+        priorice la sostenibilidad en cada decisión.
+        <strong style="color: var(--primary-ocean); display: block; margin-top: 1rem;">
+            ¡Pasa el cursor sobre cada tarjeta para descubrir más!
+        </strong>
+    </p>
+
+    <!-- Flip Cards -->
+    <div class="row justify-content-center mb-5">
+        <!-- REDUCIR -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="{{ url_for('static', filename='images/reducir.png') }}" 
+                             class="card-img" 
+                             alt="Reducir">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>♻️ Reducir</h3>
+                        <p>Consumir solo lo necesario. La mejor manera de reducir residuos es no generarlos en primer lugar.</p>
+                        <small style="opacity: 0.95; margin-top: 1rem; display: block; font-size: 0.95rem;">
+                            💡 El consumo consciente ahorra dinero y recursos
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REUTILIZAR -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="{{ url_for('static', filename='images/reutiliza.png') }}" 
+                             class="card-img" 
+                             alt="Reutilizar">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>🔄 Reutilizar</h3>
+                        <p>Dar una segunda vida a los objetos antes de desecharlos. Repara, dona, vende o transforma creativamente.</p>
+                        <small style="opacity: 0.95; margin-top: 1rem; display: block; font-size: 0.95rem;">
+                            💡 Reutilizar es más efectivo que reciclar
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RECICLAR -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="{{ url_for('static', filename='images/recicla.png') }}" 
+                             class="card-img" 
+                             alt="Reciclar">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>🌱 Reciclar</h3>
+                        <p>Transformar residuos en nuevas materias primas. Separa correctamente: papel, vidrio, plástico y orgánicos.</p>
+                        <small style="opacity: 0.95; margin-top: 1rem; display: block; font-size: 0.95rem;">
+                            💡 Reciclar correctamente multiplica el impacto
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estadísticas de impacto -->
+    <div class="row mt-5 mb-5 animate-on-scroll">
+        <div class="col-12">
+            <div class="content-card" style="background: var(--gradient-ocean); color: white; border: none;">
+                <h3 style="font-weight: 700; margin-bottom: 2rem; text-align: center; font-size: 2rem;">
+                     El Impacto de las 3 R en Números
+                </h3>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-3">
+                        <div style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">85%</div>
+                        <p style="font-size: 1.1rem;">Reducción de emisiones al reciclar papel</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">95%</div>
+                        <p style="font-size: 1.1rem;">Menos energía al reciclar aluminio vs producir nuevo</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">70%</div>
+                        <p style="font-size: 1.1rem;">De residuos domésticos son reutilizables o reciclables</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guía práctica por categoría -->
+    <div class="row mt-5 animate-on-scroll">
+        <div class="col-12 mb-4">
+            <h3 class="text-center text-gradient" style="font-weight: 700; font-size: 2.3rem; margin-bottom: 2rem;">
+                 Guía Práctica de las 3 R
+            </h3>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="content-card" style="height: 100%; border-top: 5px solid #0891b2;">
+                <h4 style="color: var(--primary-ocean); font-weight: 600; margin-bottom: 1.5rem; text-align: center;">
+                    🛒 Al Comprar
+                </h4>
+                <div style="background: #f0fdfa; padding: 1.2rem; border-radius: 12px; margin-bottom: 1rem;">
+                    <h5 style="color: #0e7490; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">Reducir:</h5>
+                    <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem;">
+                        <li>Compra solo lo necesario</li>
+                        <li>Evita empaques excesivos</li>
+                        <li>Prefiere productos a granel</li>
+                        <li>Lleva tus propias bolsas</li>
+                    </ul>
+                </div>
+                <div style="background: #cffafe; padding: 1.2rem; border-radius: 12px; margin-bottom: 1rem;">
+                    <h5 style="color: #0e7490; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">Reutilizar:</h5>
+                    <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem;">
+                        <li>Usa contenedores reutilizables</li>
+                        <li>Compra segunda mano</li>
+                        <li>Prefiere productos duraderos</li>
+                    </ul>
+                </div>
+                <div style="background: #e0f2fe; padding: 1.2rem; border-radius: 12px;">
+                    <h5 style="color: #0e7490; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">Reciclar:</h5>
+                    <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem;">
+                        <li>Busca productos reciclables</li>
+                        <li>Verifica símbolos de reciclaje</li>
+                        <li>Elige envases retornables</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="content-card" style="height: 100%; border-top: 5px solid #14b8a6;">
+                <h4 style="color: var(--secondary-teal); font-weight: 600; margin-bottom: 1.5rem; text-align: center;">
+                    🏠 En Casa
+                </h4>
+                <div style="background: #f0fdfa; padding: 1.2rem; border-radius: 12px; margin-bottom: 1rem;">
+                    <h5 style="color: #0e7490; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">Reducir:</h5>
+                    <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem;">
+                        <li>Planifica comidas (menos desperdicio)</li>
+                        <li>Usa servilletas de tela</li>
+                        <li>Imprime solo lo necesario</li>
+                        <li>Ajusta porciones de comida</li>
+                    </ul>
+                </div>
+                <div style="background: #cffafe; padding: 1.2rem; border-radius: 12px; margin-bottom: 1rem;">
+                    <h5 style="color: #0e7490; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">Reutilizar:</h5>
+                    <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem;">
+                        <li>Frascos como organizadores</li>
+                        <li>Ropa vieja como trapos</li>
+                        <li>Muebles restaurados</li>
+                    </ul>
+                </div>
+                <div style="background: #e0f2fe; padding: 1.2rem; border-radius: 12px;">
+                    <h5 style="color: #0e7490; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">Reciclar:</h5>
+                    <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem;">
+                        <li>Separa por categorías</li>
+                        <li>Limpia envases antes</li>
+                        <li>Composta orgánicos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="content-card" style="height: 100%; border-top: 5px solid #0e7490;">
+                <h4 style="color: var(--deep-blue); font-weight: 600; margin-bottom: 1.5rem; text-align: center;">
+                    🏢 En el Trabajo/Escuela
+                </h4>
+                <div style="background: #f0fdfa; padding: 1.2rem; border-radius: 12px; margin-bottom: 1rem;">
+                    <h5 style="color: #0e7490; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">Reducir:</h5>
+                    <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem;">
+                        <li>Documentos digitales</li>
+                        <li>Taza personal en vez de desechable</li>
+                        <li>Imprime doble cara</li>
+                        <li>Apaga luces y equipos</li>
+                    </ul>
+                </div>
+                <div style="background: #cffafe; padding: 1.2rem; border-radius: 12px; margin-bottom: 1rem;">
+                    <h5 style="color: #0e7490; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">Reutilizar:</h5>
+                    <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem;">
+                        <li>Papel usado como borrador</li>
+                        <li>Envases como organizadores</li>
+                        <li>Comparte materiales</li>
+                    </ul>
+                </div>
+                <div style="background: #e0f2fe; padding: 1.2rem; border-radius: 12px;">
+                    <h5 style="color: #0e7490; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem;">Reciclar:</h5>
+                    <ul style="font-size: 0.95rem; margin: 0; padding-left: 1.2rem;">
+                        <li>Botes separadores visibles</li>
+                        <li>Papel y cartón apilados</li>
+                        <li>Electrónicos a centros especiales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mitos vs Realidad -->
+    <div class="mt-5 animate-on-scroll">
+        <h3 class="text-center mb-4 text-gradient" style="font-weight: 700; font-size: 2.2rem;">
+             Mitos y Realidades sobre Reciclaje
+        </h3>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="content-card" style="background: #fef2f2; border-left: 5px solid #dc2626;">
+                    <h5 style="color: #991b1b; font-weight: 600; margin-bottom: 1rem;">❌ MITO</h5>
+                    <p style="font-size: 1.05rem; margin: 0;">"Todo lo que va al bote de reciclaje se recicla"</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="content-card" style="background: #f0fdf4; border-left: 5px solid #10b981;">
+                    <h5 style="color: #065f46; font-weight: 600; margin-bottom: 1rem;">✅ REALIDAD</h5>
+                    <p style="font-size: 1.05rem; margin: 0;">Solo el 9% del plástico se recicla globalmente. La separación correcta es crucial.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+                <div class="content-card" style="background: #fef2f2; border-left: 5px solid #dc2626;">
+                    <h5 style="color: #991b1b; font-weight: 600; margin-bottom: 1rem;">❌ MITO</h5>
+                    <p style="font-size: 1.05rem; margin: 0;">"Enjuagar envases gasta más agua de la que ahorramos"</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="content-card" style="background: #f0fdf4; border-left: 5px solid #10b981;">
+                    <h5 style="color: #065f46; font-weight: 600; margin-bottom: 1rem;">✅ REALIDAD</h5>
+                    <p style="font-size: 1.05rem; margin: 0;">Envases sucios contaminan lotes enteros. Un enjuague rápido hace la diferencia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to action final -->
+    <div class="mt-5 animate-on-scroll">
+        <div class="content-card text-center" style="background: var(--gradient-ocean); color: white; border: none;">
+            <h3 style="font-weight: 700; margin-bottom: 1.5rem; font-size: 2.2rem;">
+                 El Cambio Empieza Contigo
+            </h3>
+            <p style="font-size: 1.25rem; max-width: 750px; margin: 0 auto 1.5rem; line-height: 1.8;">
+                No necesitas ser perfecto. Cada pequeño cambio suma. Empieza con una "R" 
+                y ve incorporando las demás gradualmente. Lo importante es comenzar HOY.
+            </p>
+            <div style="font-size: 1.1rem; margin-top: 2rem;">
+                <strong> Compromiso personal:</strong> ¿Cuál de las 3 R implementarás esta semana?
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% block title %}Sistema de Gestión Ambiental{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2> Sistema de Gestión Ambiental</h2>
+    <p style="font-size: 1.3rem; margin-top: 1.2rem; opacity: 0.97;">
+       <center>Transformando organizaciones hacia un futuro sostenible</center>
+    </p>
+</div>
+
+<div class="content-card animate-on-scroll">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="{{ url_for('static', filename='images/sistema.jpeg') }}" 
+                 class="img-fluid rounded" 
+                 alt="Sistema de Gestión Ambiental">
+        </div>
+        <div class="col-lg-6">
+            <h3 class="text-gradient mb-4" style="font-weight: 700; font-size: 2.2rem;">
+                ¿Qué es un SGA?
+            </h3>
+            <p style="font-size: 1.1rem; line-height: 1.9;">
+                Un Sistema de Gestión Ambiental (SGA) es un conjunto estructurado de políticas,
+                procedimientos y prácticas que permiten a las organizaciones identificar, controlar 
+                y reducir su impacto ambiental de manera sistemática y continua.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.9;">
+                Basado en normas internacionales como la <strong>ISO 14001</strong>, un SGA efectivo 
+                ayuda a las empresas a alcanzar sus objetivos ambientales mientras mejoran su 
+                competitividad, reducen costos operativos y fortalecen su reputación corporativa.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Timeline de Hitos Ambientales Globales -->
+<div class="mt-5 animate-on-scroll">
+    <h3 class="text-center mb-5 text-gradient" style="font-weight: 700; font-size: 2.8rem;">
+         Línea del Tiempo: Acciones Ambientales Globales
+    </h3>
+    
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4 style="color: var(--ocean-blue); font-weight: 700; margin-bottom: 1rem;">1972 - Conferencia de Estocolmo</h4>
+                <p>Primera conferencia mundial sobre medio ambiente. Nace el <strong>Programa de las Naciones Unidas para el Medio Ambiente (PNUMA)</strong>.</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4 style="color: var(--aqua-green); font-weight: 700; margin-bottom: 1rem;">1987 - Protocolo de Montreal</h4>
+                <p>Acuerdo internacional para <strong>proteger la capa de ozono</strong>. Resultado: reducción del 99% de sustancias que agotan el ozono.</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4 style="color: var(--teal-bright); font-weight: 700; margin-bottom: 1rem;">1992 - Cumbre de Río</h4>
+                <p>Se establece el <strong>Convenio sobre Diversidad Biológica</strong> y la Convención Marco de las Naciones Unidas sobre el Cambio Climático.</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4 style="color: var(--ocean-blue); font-weight: 700; margin-bottom: 1rem;">1997 - Protocolo de Kioto</h4>
+                <p>Primer acuerdo vinculante para <strong>reducir emisiones de gases de efecto invernadero</strong> en países desarrollados.</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4 style="color: var(--aqua-green); font-weight: 700; margin-bottom: 1rem;">2015 - Acuerdo de París</h4>
+                <p>195 países se comprometen a <strong>limitar el calentamiento global a menos de 2°C</strong>, idealmente 1.5°C.</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4 style="color: var(--teal-bright); font-weight: 700; margin-bottom: 1rem;">2023 - Tratado de Alta Mar</h4>
+                <p>Acuerdo histórico para <strong>proteger el 30% de los océanos</strong> del mundo para 2030.</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Fases de implementación -->
+<div class="mt-5 animate-on-scroll">
+    <h3 class="text-center mb-5 text-gradient" style="font-weight: 700; font-size: 2.5rem;">
+         Fases de Implementación de un SGA
+    </h3>
+    
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="content-card text-center" style="height: 100%; border-left: 5px solid var(--ocean-blue);">
+                <div style="font-size: 3.5rem; margin-bottom: 1rem;">1</div>
+                <h4 style="color: var(--ocean-blue); font-weight: 600; margin-bottom: 1rem;">Planificación</h4>
+                <p style="font-size: 0.95rem;">Evaluación inicial, identificación de aspectos ambientales significativos y definición de objetivos SMART.</p>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="content-card text-center" style="height: 100%; border-left: 5px solid var(--aqua-green);">
+                <div style="font-size: 3.5rem; margin-bottom: 1rem;">2</div>
+                <h4 style="color: var(--aqua-green); font-weight: 600; margin-bottom: 1rem;">Implementación</h4>
+                <p style="font-size: 0.95rem;">Asignación de recursos, capacitación del personal y establecimiento de procedimientos operativos.</p>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="content-card text-center" style="height: 100%; border-left: 5px solid var(--teal-bright);">
+                <div style="font-size: 3.5rem; margin-bottom: 1rem;">3</div>
+                <h4 style="color: var(--teal-bright); font-weight: 600; margin-bottom: 1rem;">Verificación</h4>
+                <p style="font-size: 0.95rem;">Monitoreo continuo, auditorías internas y medición del desempeño ambiental con KPIs.</p>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="content-card text-center" style="height: 100%; border-left: 5px solid var(--sea-deep);">
+                <div style="font-size: 3.5rem; margin-bottom: 1rem;">4</div>
+                <h4 style="color: var(--sea-deep); font-weight: 600; margin-bottom: 1rem;">Mejora Continua</h4>
+                <p style="font-size: 0.95rem;">Revisión gerencial, ajustes estratégicos y actualización de políticas ambientales.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Beneficios y componentes -->
+<div class="row mt-5 animate-on-scroll">
+    <div class="col-md-6 mb-4">
+        <div class="content-card" style="height: 100%;">
+            <h4 style="color: var(--ocean-blue); font-weight: 600; margin-bottom: 1.5rem; font-size: 1.6rem;">
+                 Beneficios Medibles
+            </h4>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="padding: 1.2rem; margin-bottom: 1rem; background: #e0f7fa; border-radius: 14px; border-left: 5px solid var(--ocean-blue);">
+                    <strong> Reducción de costos:</strong> Ahorro del 20-30% en energía, agua y materias primas
+                </li>
+                <li style="padding: 1.2rem; margin-bottom: 1rem; background: #e0f7fa; border-radius: 14px; border-left: 5px solid var(--aqua-green);">
+                    <strong> Cumplimiento normativo:</strong> Evita multas (promedio $50,000 USD) y sanciones legales
+                </li>
+                <li style="padding: 1.2rem; margin-bottom: 1rem; background: #e0f7fa; border-radius: 14px; border-left: 5px solid var(--teal-bright);">
+                    <strong> Imagen corporativa:</strong> 73% de inversores prefieren empresas con certificación ambiental
+                </li>
+                <li style="padding: 1.2rem; background: #e0f7fa; border-radius: 14px; border-left: 5px solid var(--sea-deep);">
+                    <strong> Ventaja competitiva:</strong> Acceso a licitaciones verdes (mercado de $12 billones)
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+        <div class="content-card" style="height: 100%;">
+            <h4 style="color: var(--ocean-blue); font-weight: 600; margin-bottom: 1.5rem; font-size: 1.6rem;">
+                 Componentes Esenciales
+            </h4>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="padding: 1.2rem; margin-bottom: 1rem; background: #b2ebf2; border-radius: 14px; border-left: 5px solid var(--ocean-blue);">
+                    <strong> Política ambiental:</strong> Compromiso documentado y visible de la alta dirección
+                </li>
+                <li style="padding: 1.2rem; margin-bottom: 1rem; background: #b2ebf2; border-radius: 14px; border-left: 5px solid var(--aqua-green);">
+                    <strong> Objetivos SMART:</strong> Específicos, Medibles, Alcanzables, Relevantes, Temporales
+                </li>
+                <li style="padding: 1.2rem; margin-bottom: 1rem; background: #b2ebf2; border-radius: 14px; border-left: 5px solid var(--teal-bright);">
+                    <strong> Capacitación:</strong> 100% del personal consciente y preparado anualmente
+                </li>
+                <li style="padding: 1.2rem; background: #b2ebf2; border-radius: 14px; border-left: 5px solid var(--sea-deep);">
+                    <strong> Documentación:</strong> Registros digitales con trazabilidad completa
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Impacto real -->
+<div class="mt-4 animate-on-scroll">
+    <div class="content-card" style="background: var(--gradient-ocean); color: white; border: none;">
+        <h3 style="font-weight: 700; margin-bottom: 2.5rem; text-align: center; font-size: 2.3rem;">
+             Impacto Real en Empresas Certificadas
+        </h3>
+        <div class="row">
+            <div class="col-md-3 text-center mb-4">
+                <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.8rem;">65%</div>
+                <p style="font-size: 1.1rem;">Reducción en generación de residuos peligrosos</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.8rem;">40%</div>
+                <p style="font-size: 1.1rem;">Ahorro promedio en consumo de recursos naturales</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.8rem;">85%</div>
+                <p style="font-size: 1.1rem;">De empleados reportan mayor compromiso</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.8rem;">92%</div>
+                <p style="font-size: 1.1rem;">Mantienen o superan sus objetivos ambientales</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Motivación final -->
+<div class="mt-4 animate-on-scroll">
+    <div class="content-card text-center" style="background: linear-gradient(135deg, #b2ebf2 0%, #e0f7fa 100%); border: none;">
+        <h4 style="color: var(--sea-deep); font-weight: 700; margin-bottom: 1.5rem; font-size: 2rem;">
+             ¿Tu organización está lista para navegar hacia el futuro?
+        </h4>
+        <p style="font-size: 1.2rem; color: #0d1b2a; max-width: 700px; margin: 0 auto; line-height: 1.9;">
+            Implementar un SGA no es solo cumplir con regulaciones, es una inversión estratégica 
+            que genera retornos tangibles en eficiencia, reputación y sostenibilidad. Como el océano 
+            que se renueva constantemente, <strong>tu empresa puede transformarse</strong> y liderar 
+            el cambio hacia un futuro más verde.
+        </p>
+    </div>
+</div>
+
+{% endblock %}
