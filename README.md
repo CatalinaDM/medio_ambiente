@@ -9,17 +9,20 @@ Este repositorio contiene una aplicación web desarrollada con Flask, enfocada e
 
 🎥 Video de demostración:  
 https://drive.google.com/file/d/1DSZOG1NbILY3_DlhmXC83WO8KARbUIQ7/view
+<img width="1654" height="793" alt="image" src="https://github.com/user-attachments/assets/0f62557a-c3d6-4243-aeb9-92e8263fc9f5" />
 
-<img width="1920" height="1022" alt="image" src="https://github.com/user-attachments/assets/675639ad-e579-4d18-b28b-0a44dd3bafe8" />
+<img width="1920" height="957" alt="image" src="https://github.com/user-attachments/assets/782062bf-f83b-4b72-988a-efbe1e200ea6" />
 
-<img width="1920" height="1022" alt="image" src="https://github.com/user-attachments/assets/675639ad-e579-4d18-b28b-0a44dd3bafe8" />
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/83fc5c41-8341-4947-8340-f77cebc1f964" />
-<img width="1920" height="961" alt="image" src="https://github.com/user-attachments/assets/78de0be4-8153-4a42-afb9-20d4fe760ddd" />
-<img width="1920" height="933" alt="image" src="https://github.com/user-attachments/assets/ba77a791-e2f3-4454-b376-4101ba6eeeb7" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d26595db-d8c6-4121-aafb-9675f4b8166d" />
-<img width="1920" height="957" alt="image" src="https://github.com/user-attachments/assets/97023415-7f5d-4cca-bd65-76994f2760c5" />
-<img width="1920" height="902" alt="image" src="https://github.com/user-attachments/assets/9bf041dd-351d-4119-8843-1adec1758570" />
+<img width="1920" height="1016" alt="image" src="https://github.com/user-attachments/assets/ad8bb6b8-4a0d-40ae-b7a2-ad47e8c08e60" />
 
+<img width="1920" height="891" alt="image" src="https://github.com/user-attachments/assets/14b1d019-77a8-44f2-9488-4d7104d4a54b" />
+
+<img width="1910" height="911" alt="image" src="https://github.com/user-attachments/assets/bd9530f1-9c8f-4000-9541-c8310353fa7d" />
+
+<img width="1920" height="953" alt="image" src="https://github.com/user-attachments/assets/00c5de73-8ddc-4622-b954-a72e8d459926" />
+
+<img width="1920" height="886" alt="image" src="https://github.com/user-attachments/assets/107d5a26-fc71-4b63-a12f-7fbe71e5016b" />
+<img width="1918" height="980" alt="image" src="https://github.com/user-attachments/assets/b189ad3d-60ff-41b8-996f-57f004c83fa3" />
 
 ## 1. Creación del proyecto Flask desde cero
 
